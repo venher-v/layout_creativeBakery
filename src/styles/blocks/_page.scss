@@ -1,0 +1,19 @@
+.page {
+  font-family: "Inter", sans-serif;
+  @include font(16px, 400, 1.5, -0.01em);
+  color: $black;
+  background-color: $lightPink;
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    transition: 0.3s;
+
+    &:target {
+      transform: translateX(0);
+    }
+  }
+}

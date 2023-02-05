@@ -1,0 +1,36 @@
+.header {
+  @include headerMobil;
+
+  &__logo {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__menu {
+    &--desktop {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 64px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &:nth-last-child(2) {
+      margin-right: 92px;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: inherit;
+  }
+}

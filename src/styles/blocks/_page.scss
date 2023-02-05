@@ -16,4 +16,16 @@
       transform: translateX(0);
     }
   }
+
+  &__about-us {
+    margin-bottom: 72px;
+
+    @include onTablet {
+      margin-bottom: 152px;
+    }
+
+    @include fromDesktop {
+      margin-bottom: 349px;
+    }
+  }
 }

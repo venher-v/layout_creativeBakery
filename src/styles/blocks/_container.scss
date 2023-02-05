@@ -1,7 +1,22 @@
 .container {
   padding: 0 20px;
 
+  @include bigScrin {
+    padding: 0 124px;
+  }
+
   &__footer {
     padding: 60px 20px 56px;
+
+    @include fromTablet {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      column-gap: 24px;
+      padding: 93px 44px 88px;
+    }
+
+    @include bigScrin {
+      padding: 93px 144px 88px;
+    }
   }
 }

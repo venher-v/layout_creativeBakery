@@ -16,6 +16,12 @@
   }
 }
 
+@mixin fromDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin bigScrin {
   @media (min-width: 1200px) {
     @content;

@@ -1,3 +1,13 @@
 .title {
-  @include font (48px, 400, 0.85, -0.05em);
+  @include font(48px, 400, 0.85, -0.05em);
+  color: $accentOrange;
+  text-transform: uppercase;
+
+  @include onTablet {
+    font-size: 56px;
+  }
+
+  @include fromDesktop {
+    font-size: 72px;
+  }
 }

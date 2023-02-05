@@ -1,12 +1,15 @@
 @import "utils/reset";
 @import "utils/vars";
 @import "utils/mixins";
+@import "utils/extends";
 
 @import "blocks/page";
-// @import "blocks/container";
+@import "blocks/container";
 @import "blocks/header";
 @import "blocks/menu";
+@import "blocks/title";
 @import "blocks/icon";
+@import "blocks/footer";
 
 .logo {
   -webkit-tap-highlight-color: transparent;

@@ -1,0 +1,59 @@
+.footer {
+  height: 914px;
+  background-color: $black;
+
+  &__logo {
+    margin-bottom: 46px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__item-title {
+    color: $grey;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    margin-bottom: 16px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__link {
+    color: $white;
+  }
+
+  &__title {
+    width: 280px;
+    margin-bottom: 40px;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__icon {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 42px;
+
+    &-facebook {
+      background-image: url("../images/facebook.png");
+      @extend %footerBackground;
+    }
+
+    &-instagram {
+      background-image: url("../images/instagram.png");
+      @extend %footerBackground;
+    }
+
+    &-twitter {
+      background-image: url("../images/twiter.png");
+      @extend %footerBackground;
+    }
+  }
+
+  &__copyright { 
+    color: $grey;
+  }
+}

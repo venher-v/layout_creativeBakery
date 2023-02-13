@@ -1,0 +1,92 @@
+.products {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    margin-bottom: 56px;
+
+    @media (min-width: 640px) {
+      margin-bottom: 80px;
+    }
+  }
+
+  &__items {
+    @media (min-width: 1280px) {
+      @include grid;
+    }
+
+    &-wraper {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (min-width: 640px) {
+        flex-wrap: nowrap;
+        column-gap: 24px;
+      }
+
+      &--left {
+        grid-column: 1 / 7;
+      }
+
+      &--right {
+        grid-column: 3 / 9;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 56px;
+
+    &-image {
+      margin: 0 auto 20px;
+      width: 288px;
+      height: 356px;
+      border-radius: 8px;
+      transition: scale 0.3s;
+
+      @media (min-width: 640px) {
+        width: 328px;
+        height: 424px;
+      }
+
+      @media (min-width: 1280px) {
+        width: 402px;
+        height: 512px;
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+
+    &-title {
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: $grey;
+    }
+
+    &-description {
+      margin-bottom: 24px;
+    }
+
+    &-button {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 84px;
+      height: 32px;
+      color: $accentOrange;
+      -webkit-tap-highlight-color: transparent;
+
+      &::before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        background-image: url("../images/arrow.png");
+      }
+    }
+  }
+}

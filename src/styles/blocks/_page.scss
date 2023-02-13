@@ -5,10 +5,6 @@
   background-color: $lightPink;
   scroll-behavior: smooth;
 
-  &__header {
-    margin-bottom: 32px;
-  }
-
   // &__menu {
   //   position: fixed;
   //   top: 0;
@@ -23,7 +19,17 @@
   // }
 
   &__blog {
-    margin-bottom: 152px;
+    @include fromDesktop {
+      margin-bottom: 152px;
+    }
+  }
+
+  &__product {
+    margin-bottom: 72px;
+
+    @media (min-width: 640px) {
+      margin-bottom: 152px;
+    }
   }
 
   &__about-us {

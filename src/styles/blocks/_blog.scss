@@ -1,0 +1,144 @@
+.blog {
+  &__wraper {
+    padding-bottom: 104px;
+
+    @include fromTablet {
+      @include grid;
+      padding-bottom: 228px;
+    }
+
+    @include onDesktop {
+      padding: 136px 0 160px;
+    }
+
+    @include bigScrin {
+      padding: 144px 0 138px;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: 32px;
+
+    @include fromTablet {
+      text-align: left;
+    }
+
+    @include onTablet {
+      margin-bottom: 146px;
+      grid-column: 1 / 5;
+    }
+
+    @include fromDesktop {
+      margin-bottom: 8px;
+      grid-column: 1 / 3;
+    }
+
+    @include bigScrin {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    @include font(64px, 400, 0.85, -0.05em);
+    text-align: center;
+
+    @include onTablet {
+      margin-bottom: 210px;
+      font-size: 80px;
+    }
+
+    @include fromTablet {
+      position: relative;
+      grid-column: 1 / 9;
+      grid-row: 2 /3;
+
+      &:before {
+        --width: 326px;
+        --height: 328px;
+
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: var(--width);
+        height: var(--height);
+        background-image: url("../images/photo/cookie_big.png");
+        background-size: cover;
+        z-index: -1;
+
+        @include onDesktop {
+          --width: 544px;
+          --height: 546px;
+        }
+
+        @include bigScrin {
+          --width: 584px;
+          --height: 586px;
+        }
+      }
+    }
+
+    @include fromDesktop {
+      font-size: 136px;
+      margin-bottom: 64px;
+    }
+
+    @include bigScrin {
+      font-size: 144px;
+    }
+  }
+
+  &__image {
+    margin: 0 auto;
+
+    @include fromTablet {
+      display: none;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    // margin-bottom: 104px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 2px solid $accentOrange;
+    border-radius: 32px;
+    color: $accentOrange;
+    transition: all 0.3s;
+    -webkit-tap-highlight-color: transparent;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      display: block;
+      margin-right: 6px;
+      background-image: url("../images/vector.png");
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $accentOrange;
+      outline: none;
+
+      &::before {
+        background-image: url("../images/vector_hover.png");
+      }
+    }
+
+    @include onTablet {
+      grid-column: 3 / 7;
+    }
+
+    @include fromDesktop {
+      grid-column: 1 / 3;
+    }
+  }
+}

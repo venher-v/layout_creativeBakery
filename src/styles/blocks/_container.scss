@@ -1,6 +1,10 @@
 .container {
   padding: 0 20px;
 
+  @include fromTablet {
+    padding: 0 44px;
+  }
+
   @include bigScrin {
     padding: 0 124px;
   }

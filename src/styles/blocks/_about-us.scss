@@ -1,17 +1,37 @@
 .about-us {
-  background-image: url("../images/crumbs.png");
-  background-repeat: no-repeat;
-  background-size: 320px;
-  background-position: center 80%;
+  position: relative;
+  z-index: -1;
 
-  @include onTablet {
-    background-size: 526px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 0;
+    // transform: translate(-50%, -50%);
+    display: block;
+    width: 320px;
+    height: 300px;
+    z-index: -1;
+    background-image: url("../images/crumbs.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
-  }
 
-  @include fromDesktop {
-    background-size: contain;
-    background-position: center 70%;
+    @include onTablet {
+      width: 526px;
+      height: 494px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include fromDesktop {
+      width: 718px;
+      height: 673px;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
   }
 
   &__title-wrap {
@@ -24,15 +44,36 @@
     @include fromDesktop {
       margin-bottom: 146px;
     }
+
+    @include bigScrin {
+      @include grid;
+    }
   }
 
   &__title {
     flex: 0 0 60%;
     margin-bottom: 32px;
+
+    @include fromTablet {
+      flex: 0 0 50%;
+      margin: 0;
+    }
+
+    @include bigScrin {
+      grid-column: 1 / 4;
+    }
   }
 
   &__text {
     margin-bottom: 64px;
+
+    @include fromTablet {
+      margin-bottom: 0;
+    }
+
+    @include bigScrin {
+      grid-column: 5 / 9;
+    }
   }
 
   &__content-wraper {
@@ -46,6 +87,10 @@
   &__content-item {
     margin-bottom: 48px;
     flex: 0 0 50%;
+
+    @include fromTablet {
+      margin-bottom: 0;
+    }
 
     @include fromDesktop {
       flex: 0 0 25%;

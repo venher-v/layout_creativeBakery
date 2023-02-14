@@ -21,7 +21,7 @@
     background-position: center;
     -webkit-tap-highlight-color: transparent;
 
-    @media (min-width: 1023px) {
+    @include onDesktop {
       display: none;
     }
   }

@@ -19,7 +19,7 @@
   // }
 
   &__blog {
-    @include fromDesktop {
+    @include onDesktop {
       margin-bottom: 152px;
     }
   }
@@ -27,7 +27,7 @@
   &__product {
     margin-bottom: 72px;
 
-    @media (min-width: 640px) {
+    @include onTablet {
       margin-bottom: 152px;
     }
   }
@@ -39,7 +39,7 @@
       margin-bottom: 152px;
     }
 
-    @include fromDesktop {
+    @include onDesktop {
       margin-bottom: 349px;
     }
   }
